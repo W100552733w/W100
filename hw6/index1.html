@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Transition 側欄</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .sidebar {
+            width: 60px;
+            height: 100vh;
+            background-color: #333;
+            color: white;
+            overflow-x: hidden;
+            transition: width 0.3s;
+            position: fixed;
+        }
+
+        .sidebar:hover {
+            width: 200px;
+        }
+
+        .sidebar a {
+            display: block;
+            padding: 15px 20px;
+            text-decoration: none;
+            color: white;
+        }
+
+        .sidebar a:hover {
+            background-color: #575757;
+        }
+
+        .content {
+            margin-left: 60px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <a href="#introduction">自我介紹</a>
+        <a href="#projects">作品</a>
+        <a href="#contact">聯絡我</a>
+    </div>
+    <div class="content">
+        <h2 id="introduction">自我介紹</h2>
+        <p>你好，我是XXX。我熱愛編程和技術創新。</p>
+        <h2 id="projects">作品</h2>
+        <p>這裡展示了我過去的一些項目。</p>
+        <h2 id="contact">聯絡我</h2>
+        <p>你可以通過email@example.com聯絡我。</p>
+    </div>
+</body>
+</html>
