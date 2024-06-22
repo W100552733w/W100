@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript 切換側欄</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .sidebar {
+            width: 60px;
+            height: 100vh;
+            background-color: #333;
+            color: white;
+            overflow-x: hidden;
+            transition: width 0.3s;
+            position: fixed;
+        }
+
+        .sidebar.expanded {
+            width: 200px;
+        }
+
+        .sidebar a {
+            display: block;
+            padding: 15px 20px;
+            text-decoration: none;
+            color: white;
+        }
+
+        .sidebar a:hover {
+            background-color: #575757;
+        }
+
+        .content {
+            margin-left: 60px;
+            padding: 20px;
+            transition: margin-left 0.3s;
+        }
+
+        .content.expanded {
+            margin-left: 200px;
+        }
+
+        .toggle-btn {
+            position: fixed;
+            top: 20px;
+            left: 60px;
+            padding: 10px;
+            cursor: pointer;
+            background-color: #333;
+            color: white;
+            border: none;
+            transition: left 0.3s;
+        }
+
+        .toggle-btn.expanded {
+            left: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar" id="sidebar">
+        <a href="#introduction">自我介紹</a>
+        <a href="#projects">作品</a>
+        <a href="#contact">聯絡我</a>
+    </div>
+    <button class="toggle-btn" id="toggleBtn">☰</button>
+    <div class="content" id="content">
+        <h2 id="introduction">自我介紹</h2>
+        <p>你好，我是夜夜。我熱愛編程和技術創新。</p>
+        <h2 id="projects">作品</h2>
+        <p>這裡展示了我過去的一些項目。</p>
+        <h2 id="contact">聯絡我</h2>
+        <p>你可以通過email@example.com聯絡我。</p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
